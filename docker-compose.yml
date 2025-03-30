@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:16
+    container_name: n8n_db
     restart: always
     env_file:
       - .env
@@ -56,7 +57,7 @@ services:
 
   mysql:
     image: mysql:latest
-    container_name: yourls-db
+    container_name: yourls_db
     restart: unless-stopped
     expose:
       - 3306
